@@ -1,0 +1,15 @@
+***************************************************************************************
+			Selenium Sample project 
+						- Vinoth Kumar Mahendra <vinothkumarmahendra@gmail.com
+****************************************************************************************
+Maven Command:
+	IE run:
+		test -Dsuite="iframe" -Dbrowser="explorer"
+	Mozilla run:
+		test -Dsuite="iframe" -Dbrowser="mozilla"
+	Chrome run:
+		test -Dsuite="iframe" -Dbrowser="chrome"						
+		
+		
+-Dsuite -  suite file name present in src/main/resources/suites/ folder
+-Dbrowser - browser to run. It takes explorer, mozilla & chrome. Default value is mozilla
