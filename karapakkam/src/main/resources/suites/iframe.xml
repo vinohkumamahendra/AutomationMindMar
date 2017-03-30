@@ -1,0 +1,12 @@
+<suite name="iframe">
+
+<parameter name="browser" value="chrome"/>
+<test name="PackageRun">
+	<classes>
+		<class name = "automationMind.karapakkam.FrameTesting">
+			<methods><include name = "checkIframe" /></methods>
+	</class>
+	</classes>
+</test>
+  
+</suite>  	

@@ -1,0 +1,12 @@
+<suite >
+
+<parameter name="browser" value="chrome"/>
+<test name="PackageRun">
+	<classes>
+		<class name = "automationMind.karapakkam">
+			<methods><include name = "checkIframe" /></methods>
+	</class>
+	</classes>
+</test>
+  
+</suite>  	
