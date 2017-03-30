@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="iframe" parallel="tests">
+
+
+<test name="chrome">
+	<parameter name="browser" value="chrome"/>
+	<classes>
+		<class name = "automationMind.karapakkam.FrameTesting">
+			<methods><include name = "checkIframe" /></methods>
+	</class>
+	</classes>
+</test>
+<test name="mozilla">
+	<parameter name="browser" value="mozilla"/>
+	<classes>
+		<class name = "automationMind.karapakkam.FrameTesting">
+			<methods><include name = "checkIframe" /></methods>
+	</class>
+	</classes>
+</test>
+</suite>  	

@@ -7,19 +7,18 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
 public class Base {
 
 	public WebDriver driver =  null ;
 	@BeforeClass
-	public void openBrowser(){
-		String browser= "chrome";
+	@Parameters({"browser"})
+	public void openBrowser(String browser){
 		System.out.println("I'm in Before suite");
 		if(browser.equals("mozilla")){
 			System.setProperty("webdriver.gecko.driver", 
@@ -29,7 +28,6 @@ public class Base {
 		else if(browser.equals("chrome")){
 			System.setProperty("webdriver.chrome.driver", "browser/chromedriver.exe");
 			driver = new ChromeDriver();
-			System.out.println("dd");
 		}
 		else if(browser.equals("explorer")){
 			System.setProperty("webdriver.ie.driver", "browser/IEDriverServer.exe");
@@ -55,12 +53,12 @@ public class Base {
 	public void afterC(){
 		System.out.println("I'm in After Class");
 	}
-	@AfterTest
+	@AfterMethod
 	public void AfterTest(){
 		System.out.println("I'm in After Test");
 	}
 	
-	@BeforeTest
+	@BeforeMethod
 	public void openUrl() throws InterruptedException{	
 		
 		System.out.println("Hello base class");
