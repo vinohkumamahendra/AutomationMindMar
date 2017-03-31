@@ -28,6 +28,7 @@ public class Base {
 		else if(browser.equals("chrome")){
 			System.setProperty("webdriver.chrome.driver", "browser/chromedriver.exe");
 			driver = new ChromeDriver();
+			System.out.println("I'm in Before suite");
 		}
 		else if(browser.equals("explorer")){
 			System.setProperty("webdriver.ie.driver", "browser/IEDriverServer.exe");
