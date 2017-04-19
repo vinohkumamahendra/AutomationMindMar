@@ -27,7 +27,7 @@ public class Base {
 			driver = new FirefoxDriver();
 		}
 		else if(browser.equals("chrome")){
-			System.setProperty("webdriver.chrome.driver", "./browser/chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\Users\mahev001\.jenkins\workspace\Project1\karapakkam\browser\chromedriver.exe");
 			driver = new ChromeDriver();
 			System.out.println("dd");
 		}
