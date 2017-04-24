@@ -51,7 +51,6 @@ public class Base {
 			ChromeOptions chromeOptions= new ChromeOptions();
 			chromeOptions.setBinary("C:\\Users\\mahev001\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");
 			driver = new ChromeDriver(chromeOptions);
-			C:\Users\mahev001\AppData\Local\Google\Chrome\Application
 			System.out.println("I'm in Before suite");
 		}
 		else if(browser.equals("explorer")){
