@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.Font;
@@ -48,7 +48,10 @@ public class Base {
 		}
 		else if(browser.equals("chrome")){
 			System.setProperty("webdriver.chrome.driver", "browser/chromedriver.exe");
-			driver = new ChromeDriver();
+			ChromeOptions chromeOptions= new ChromeOptions();
+			chromeOptions.setBinary("C:\\Users\\mahev001\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");
+			driver = new ChromeDriver(chromeOptions);
+			C:\Users\mahev001\AppData\Local\Google\Chrome\Application
 			System.out.println("I'm in Before suite");
 		}
 		else if(browser.equals("explorer")){
